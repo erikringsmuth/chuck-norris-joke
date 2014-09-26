@@ -1,4 +1,4 @@
-## &lt;chuck-norris-joke"&gt;
+## &lt;chuck-norris-joke&gt;
 > http://www.icndb.com/
 
 Put some Chuck Norris in your page!
