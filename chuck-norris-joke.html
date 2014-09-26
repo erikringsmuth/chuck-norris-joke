@@ -4,25 +4,18 @@
   var HTMLChuckNorrisJokeElement = Object.create(HTMLAnchorElement.prototype);
 
   HTMLChuckNorrisJokeElement.attachedCallback = function() {
-    var url = '';
-    if (this.hasAttribute('joke-id')) {
-      url = 'http://api.icndb.com/jokes/' + this.getAttribute('joke-id');
-    } else {
-      var queryParameters = [];
-      if (this.hasAttribute('firstName')) {
-        queryParameters.push('firstName=' + this.getAttribute('firstName'));
-      }
-      if (this.hasAttribute('lastName')) {
-        queryParameters.push('lastName=' + this.getAttribute('lastName'));
-      }
-      if (this.hasAttribute('limitTo')) {
-        queryParameters.push('limitTo=[' + this.getAttribute('limitTo') + ']');
-      }
-      url = 'http://api.icndb.com/jokes/random?' + queryParameters.join('&');
+    var queryParameters = [];
+    if (this.hasAttribute('firstName')) {
+      queryParameters.push('firstName=' + this.getAttribute('firstName'));
     }
-
+    if (this.hasAttribute('lastName')) {
+      queryParameters.push('lastName=' + this.getAttribute('lastName'));
+    }
+    if (this.hasAttribute('limitTo')) {
+      queryParameters.push('limitTo=[' + this.getAttribute('limitTo') + ']');
+    }
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', url);
+    xhr.open('GET', 'http://api.icndb.com/jokes/' + (this.getAttribute('joke-id') || 'random') + '?' + queryParameters.join('&'));
     xhr.onload = function(response) {
       var data = JSON.parse(response.currentTarget.response);
       this.innerHTML = data.value.joke;
