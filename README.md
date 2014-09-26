@@ -30,3 +30,5 @@ Limit to 1 or more categories
 ```html
 <chuck-norris-joke categories="nerdy,explicit"></chuck-norris-joke>
 ```
+
+Roundhouse kick the [gh-pages](http://erikringsmuth.github.io/chuck-norris-joke/).
