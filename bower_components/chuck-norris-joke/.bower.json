@@ -15,7 +15,14 @@
   "ignore": [
     "**/.*"
   ],
-  "dependencies": {
-    "chuck-norris-joke": "~1.0.0"
-  }
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "3bff1ac6da674d4d6bf8695ac1c17117b26f30f9"
+  },
+  "_source": "git://github.com/erikringsmuth/chuck-norris-joke.git",
+  "_target": "~1.0.0",
+  "_originalSource": "chuck-norris-joke",
+  "_direct": true
 }
