@@ -16,6 +16,6 @@
     "**/.*"
   ],
   "dependencies": {
-    "chuck-norris-joke": "~1.0.0"
+    "chuck-norris-joke": "~1.1.0"
   }
 }
