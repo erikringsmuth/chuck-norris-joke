@@ -1,7 +1,5 @@
 ## &lt;chuck-norris-joke&gt;
 > http://www.icndb.com/
->
-> http://erikringsmuth.github.io/chuck-norris-joke/
 
 Put some Chuck Norris in your page!
 
